@@ -3,20 +3,21 @@
 所以我需要做一个项目原型，每次需要搭建类似cms系统的时候，只需要一键即可生成！
 
 ## 一、简介
-### 1. 效果图
-![](https://kangyonggan.com/upload/cms-01.png)
+### 1. 效果图  
 
-![](https://kangyonggan.com/upload/cms-02.png)
+![cms](https://kangyonggan.com/upload/cms-01.png)
 
-![](https://kangyonggan.com/upload/cms-03.png)
+![cms](https://kangyonggan.com/upload/cms-02.png)
 
-![](https://kangyonggan.com/upload/cms-04.png)
+![cms](https://kangyonggan.com/upload/cms-03.png)
 
-![](https://kangyonggan.com/upload/cms-05.png)
+![cms](https://kangyonggan.com/upload/cms-04.png)
 
-![](https://kangyonggan.com/upload/cms-06.png)
+![cms](https://kangyonggan.com/upload/cms-05.png)
 
-![](https://kangyonggan.com/upload/cms-07.png)
+![cms](https://kangyonggan.com/upload/cms-06.png)
+
+![cms](https://kangyonggan.com/upload/cms-07.png)
 
 ### 2. 技术点
 1. Spring
