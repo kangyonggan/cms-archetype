@@ -74,9 +74,11 @@ mvn archetype:generate -DarchetypeGroupId=com.kangyonggan -DarchetypeArtifactId=
 ## 三、启动项目
 ### 1. 执行初始化脚本`schema.sql`
 
-### 2. 使用tomcat7插件启动
+### 2. 修改app.properties
 
-### 3. 访问localhost:8080
+### 3. 使用tomcat7插件启动
+
+### 4. 访问localhost:8080
 
 ## 四、集成redis
 ### 1. 添加依赖
