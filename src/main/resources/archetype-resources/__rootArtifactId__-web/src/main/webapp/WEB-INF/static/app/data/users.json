@@ -1,0 +1,35 @@
+{
+  "total": 123,
+  "rows": [
+    {
+      "username": "admin1",
+      "realname": "管理员1",
+      "isDeleted": 0,
+      "createdTime": 1524186688907
+    },
+    {
+      "username": "admin2",
+      "realname": "管理员2",
+      "isDeleted": 1,
+      "createdTime": 1524186688907
+    },
+    {
+      "username": "admin3",
+      "realname": "管理员3",
+      "isDeleted": 0,
+      "createdTime": 1524186688907
+    },
+    {
+      "username": "admin4",
+      "realname": "管理员4",
+      "isDeleted": 1,
+      "createdTime": 1524186688907
+    },
+    {
+      "username": "admin5",
+      "realname": "管理员5",
+      "isDeleted": 0,
+      "createdTime": 1524186688907
+    }
+  ]
+}

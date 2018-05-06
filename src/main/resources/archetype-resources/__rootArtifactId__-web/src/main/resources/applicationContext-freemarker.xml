@@ -1,0 +1,23 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+    <bean id="viewResolver" class="${groupId}.app.freemarker.CustomerFreeMarkerViewResolver"/>
+    <bean id="shiroTags" class="${groupId}.app.shiro.ShiroTags"/>
+
+    <bean id="freeMarkerConfigurer" class="${groupId}.app.freemarker.CustomerFreeMarkerConfigurer">
+        <property name="variables">
+            <map>
+                <entry key="app" value-ref="appTag"/>
+                <entry key="enum" value-ref="enumTag"/>
+                <entry key="dict" value-ref="dictTag"/>
+                <entry key="shiro" value-ref="shiroTags"/>
+            </map>
+        </property>
+    </bean>
+</beans>

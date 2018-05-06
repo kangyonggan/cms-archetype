@@ -1,0 +1,126 @@
+.loading {
+    margin-left: 15px;
+}
+
+.error {
+    color: red;
+}
+
+.required:after {
+    color: red;
+    content: "*";
+}
+
+.radius-base {
+    border-radius: 5px;
+}
+
+.app-label {
+    height: 34px;
+    line-height: 34px;
+    text-align: left !important;
+}
+
+.app-label:after {
+    content: ':';
+}
+
+.nowrap {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.form-table-space {
+    clear: both;
+    padding: 10px 0;
+}
+
+.page-list .dropup button.btn {
+    color: #333 !important;
+    background-color: #fff !important;
+    border: 0px solid #ccc !important;
+    padding: 0px 0px 0px 5px !important;
+}
+
+.pagination-detail {
+    border: 1px solid #d4dfe3;
+    padding: 0 5px;
+}
+
+input[readonly].readonly {
+    background: #FAFAFA !important;
+    cursor: pointer !important;
+}
+
+tr.no-records-found td {
+    padding: 40px 0px !important;
+}
+
+.fixed-table-body {
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+}
+
+.bootstrap-table .pagination {
+    margin: 0;
+}
+
+/*skin*/
+.no-skin #user-info-toggle {
+    background: #438eb9;
+}
+
+.skin-1 #user-info-toggle {
+    background: #2c6aa0;
+}
+
+.skin-2 #user-info-toggle {
+    background: #c6487e;
+}
+
+.skin-3 #user-info-toggle {
+    background: #404040;
+}
+
+.skin-2 .btn-skin {
+    background-color: #d6487e !important;
+    border-color: #d6487e;
+}
+
+.skin-2 .btn-skin:hover {
+    background-color: #b73766 !important;
+    border-color: #d6487e;
+}
+
+.skin-1 .btn-skin, .no-skin .btn-skin {
+    background-color: #428bca !important;
+    border-color: #428bca;
+}
+
+.skin-1 .btn-skin:hover, .no-skin .btn-skin:hover {
+    background-color: #1b6aaa !important;
+    border-color: #428bca;
+}
+
+.no-skin .skin-color {
+    color: #438eb9;
+}
+
+.skin-1 .skin-color {
+    color: #2c6aa0;
+}
+
+.skin-2 .skin-color {
+    color: #c6487e;
+}
+
+.skin-3 .skin-color {
+    color: #404040;
+}
+
+@media (min-width: 992px) {
+    .app-label {
+        text-align: right !important;
+    }
+}

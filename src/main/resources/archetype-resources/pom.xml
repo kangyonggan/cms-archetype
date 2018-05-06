@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>${groupId}</groupId>
+    <artifactId>${artifactId}</artifactId>
+    <packaging>pom</packaging>
+    <version>${version}</version>
+
+    <properties>
+        <!--Project-->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.build.version>1.0-SNAPSHOT</project.build.version>
+
+        <!--Plugins-->
+        <plugin.compiler.version>3.2</plugin.compiler.version>
+        <plugin.compiler.level>1.8</plugin.compiler.level>
+        <plugin.tomcat.version>2.2</plugin.tomcat.version>
+        <plugin.surefire.version>2.18.1</plugin.surefire.version>
+        <plugin.mybatis-generator.version>1.3.2</plugin.mybatis-generator.version>
+
+        <kangyonggan.version>1.0.0</kangyonggan.version>
+        <mysql.version>5.1.34</mysql.version>
+        <servlet.version>3.1.0</servlet.version>
+    </properties>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <!--compiler plugin -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${plugin.compiler.version}</version>
+                    <configuration>
+                        <source>${plugin.compiler.level}</source>
+                        <target>${plugin.compiler.level}</target>
+                        <encoding>${project.build.sourceEncoding}</encoding>
+                    </configuration>
+                </plugin>
+
+                <!--ignore test plugin -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${plugin.surefire.version}</version>
+                    <configuration>
+                        <skip>true</skip>
+                    </configuration>
+                </plugin>
+
+                <!--tomcat7 plugin-->
+                <plugin>
+                    <groupId>org.apache.tomcat.maven</groupId>
+                    <artifactId>tomcat7-maven-plugin</artifactId>
+                    <version>${plugin.tomcat.version}</version>
+                    <configuration>
+                        <port>8080</port>
+                        <path>/</path>
+                        <uriEncoding>${project.build.sourceEncoding}</uriEncoding>
+                    </configuration>
+                </plugin>
+
+                <!--MBG plugin-->
+                <plugin>
+                    <groupId>org.mybatis.generator</groupId>
+                    <artifactId>mybatis-generator-maven-plugin</artifactId>
+                    <version>${plugin.mybatis-generator.version}</version>
+                    <configuration>
+                        <verbose>true</verbose>
+                        <overwrite>true</overwrite>
+                    </configuration>
+                    <dependencies>
+                        <dependency>
+                            <groupId>com.kangyonggan</groupId>
+                            <artifactId>app-mybatis</artifactId>
+                            <version>${kangyonggan.version}</version>
+                        </dependency>
+                    </dependencies>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <dependencyManagement>
+        <dependencies>
+            <!--self-->
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>${rootArtifactId}-model</artifactId>
+                <version>${version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>${rootArtifactId}-dao</artifactId>
+                <version>${version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>${rootArtifactId}-biz</artifactId>
+                <version>${version}</version>
+            </dependency>
+
+            <!--kangyonggan-->
+            <dependency>
+                <groupId>com.kangyonggan</groupId>
+                <artifactId>app-spring</artifactId>
+                <version>${kangyonggan.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kangyonggan</groupId>
+                <artifactId>app-mybatis</artifactId>
+                <version>${kangyonggan.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kangyonggan</groupId>
+                <artifactId>app-mvc</artifactId>
+                <version>${kangyonggan.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kangyonggan</groupId>
+                <artifactId>app-shiro</artifactId>
+                <version>${kangyonggan.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kangyonggan</groupId>
+                <artifactId>app-freemarker</artifactId>
+                <version>${kangyonggan.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kangyonggan</groupId>
+                <artifactId>app-model</artifactId>
+                <version>${kangyonggan.version}</version>
+            </dependency>
+
+            <!--other-->
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>${servlet.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
