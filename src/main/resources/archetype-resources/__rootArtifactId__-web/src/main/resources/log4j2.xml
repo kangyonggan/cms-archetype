@@ -7,8 +7,8 @@
         <Console name="Console" target="SYSTEM_OUT">
             <PatternLayout pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t %logger{36}:%L] - %msg%n"/>
         </Console>
-        <RollingRandomAccessFile name="AllFile" fileName="${symbol_dollar}{${parentArtifactId}.log4j2.home}/all.log"
-                                 filePattern="${symbol_dollar}{${parentArtifactId}.log4j2.home}/all-%d{yyyy-MM-dd}-%i.log">
+        <RollingRandomAccessFile name="AllFile" fileName="${log4j2.home}/all.log"
+                                 filePattern="${log4j2.home}/all-%d{yyyy-MM-dd}-%i.log">
             <PatternLayout pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t %logger{36}:%L] - %msg%n"/>
             <Policies>
                 <TimeBasedTriggeringPolicy interval="1"/>
@@ -20,8 +20,8 @@
                 <ThresholdFilter level="debug" onMatch="ACCEPT" onMismatch="DENY"/>
             </Filters>
         </RollingRandomAccessFile>
-        <RollingRandomAccessFile name="ErrorFile" fileName="${symbol_dollar}{${parentArtifactId}.log4j2.home}/error.log"
-                                 filePattern="${symbol_dollar}{${parentArtifactId}.log4j2.home}/error-%d{yyyy-MM-dd}-%i.log">
+        <RollingRandomAccessFile name="ErrorFile" fileName="${log4j2.home}/error.log"
+                                 filePattern="${log4j2.home}/error-%d{yyyy-MM-dd}-%i.log">
             <PatternLayout pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t %logger{36}:%L] - %msg%n"/>
             <Policies>
                 <TimeBasedTriggeringPolicy interval="1"/>

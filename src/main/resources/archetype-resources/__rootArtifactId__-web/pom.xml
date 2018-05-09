@@ -65,21 +65,21 @@
         <profile>
             <id>prod</id>
             <properties>
-                <demo.log4j2.home>${user.home}/logs</demo.log4j2.home>
+                <log4j2.home>${user.home}/logs</log4j2.home>
                 <env.active>prod</env.active>
             </properties>
         </profile>
         <profile>
             <id>uat</id>
             <properties>
-                <demo.log4j2.home>${user.home}/logs</demo.log4j2.home>
+                <log4j2.home>${user.home}/logs</log4j2.home>
                 <env.active>uat</env.active>
             </properties>
         </profile>
         <profile>
             <id>sit</id>
             <properties>
-                <demo.log4j2.home>${user.home}/logs</demo.log4j2.home>
+                <log4j2.home>${user.home}/logs</log4j2.home>
                 <env.active>sit</env.active>
             </properties>
         </profile>
@@ -90,7 +90,7 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <demo.log4j2.home>${user.home}/logs</demo.log4j2.home>
+                <log4j2.home>${user.home}/logs</log4j2.home>
                 <env.active>dev</env.active>
             </properties>
         </profile>
